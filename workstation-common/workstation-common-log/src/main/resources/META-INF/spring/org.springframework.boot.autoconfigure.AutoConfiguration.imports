@@ -1,0 +1,2 @@
+com.zeriter.common.log.service.AsyncLogService
+com.zeriter.common.log.aspect.LogAspect

@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>workstation</artifactId>
         <groupId>com.zeriter</groupId>
+        <artifactId>workstation</artifactId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>workstation-common</artifactId>
-    <packaging>pom</packaging>
     <modules>
+        <module>workstation-common-log</module>
         <module>workstation-common-core</module>
+        <module>workstation-common-redis</module>
+        <module>workstation-common-swagger</module>
+        <module>workstation-common-security</module>
+        <module>workstation-common-datascope</module>
+        <module>workstation-common-datasource</module>
     </modules>
 
-    <properties>
-    </properties>
+    <artifactId>workstation-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        workstation-common通用模块
+    </description>
 
 </project>

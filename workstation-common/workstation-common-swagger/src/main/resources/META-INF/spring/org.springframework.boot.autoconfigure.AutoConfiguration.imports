@@ -1,0 +1,3 @@
+com.zeriter.common.swagger.config.SwaggerAutoConfiguration
+com.zeriter.common.swagger.config.SwaggerWebConfiguration
+com.zeriter.common.swagger.config.SwaggerBeanPostProcessor

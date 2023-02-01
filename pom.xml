@@ -7,20 +7,9 @@
     <groupId>com.zeriter</groupId>
     <artifactId>workstation</artifactId>
     <version>1.0.0</version>
-    <modules>
-        <module>workstation-auth</module>
-        <module>workstation-common</module>
-        <module>workstation-ops</module>
-        <module>workstation-gateway</module>
-        <module>workstation-services</module>
-        <module>workstation-service-api</module>
-    </modules>
-
-    <name>workstation</name>
-    <description>工作站微服务</description>
 
     <properties>
-        <workstation.version>3.6.2</workstation.version>
+        <workstation.version>1.0.0</workstation.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -158,72 +147,80 @@
                 <version>${transmittable-thread-local.version}</version>
             </dependency>
 
-<!--            &lt;!&ndash; 核心模块 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-core</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-core</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 接口模块 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-swagger</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 接口模块 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-swagger</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 安全模块 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-security</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 安全模块 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-security</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 权限范围 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-datascope</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 权限范围 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-datascope</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 多数据源 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-datasource</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 多数据源 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-datasource</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 分布式事务 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-seata</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 分布式事务 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-seata</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 日志记录 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-log</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 日志记录 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-log</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 缓存服务 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-common-redis</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 缓存服务 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-common-redis</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
-<!--            &lt;!&ndash; 系统接口 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.ruoyi</groupId>-->
-<!--                <artifactId>ruoyi-api-system</artifactId>-->
-<!--                <version>${ruoyi.version}</version>-->
-<!--            </dependency>-->
+            <!-- 系统接口 -->
+            <dependency>
+                <groupId>com.zeriter</groupId>
+                <artifactId>workstation-system-api</artifactId>
+                <version>${workstation.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
 
+    <modules>
+        <module>workstation-auth</module>
+        <module>workstation-gateway</module>
+        <module>workstation-ops</module>
+        <module>workstation-services</module>
+        <module>workstation-services-api</module>
+        <module>workstation-common</module>
+    </modules>
     <packaging>pom</packaging>
 
     <dependencies>
