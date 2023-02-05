@@ -1,15 +1,5 @@
 package com.zeriter.gateway.service.impl;
 
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-import javax.annotation.Resource;
-import javax.imageio.ImageIO;
-
-import com.zeriter.gateway.service.ValidateCodeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.util.FastByteArrayOutputStream;
 import com.google.code.kaptcha.Producer;
 import com.zeriter.common.core.constant.CacheConstants;
 import com.zeriter.common.core.constant.Constants;
@@ -20,6 +10,16 @@ import com.zeriter.common.core.utils.uuid.IdUtils;
 import com.zeriter.common.core.web.domain.AjaxResult;
 import com.zeriter.common.redis.service.RedisService;
 import com.zeriter.gateway.config.properties.CaptchaProperties;
+import com.zeriter.gateway.service.ValidateCodeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.FastByteArrayOutputStream;
+
+import javax.annotation.Resource;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 验证码实现处理
@@ -83,7 +83,7 @@ public class ValidateCodeServiceImpl implements ValidateCodeService{
         }
 
         ajax.put("uuid", uuid);
-        ajax.put("img", Base64.encode(os.toByteArray()));
+        ajax.put("img", "data:image/jpg;base64,"+Base64.encode(os.toByteArray()));
         return ajax;
     }
 

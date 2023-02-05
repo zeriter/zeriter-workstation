@@ -13,6 +13,6 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class RunGatewayApplication{
     public static void main(String[] args){
         SpringApplication.run(RunGatewayApplication.class, args);
-        System.out.println("----------(: 若依网关启动成功 :)----------");
+        System.out.println("----------(: 网关启动成功 :)----------");
     }
 }
