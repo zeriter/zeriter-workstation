@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
     <!-- 日志存放路径 -->
 	<property name="log.path" value="logs/workstation-visual-monitor" />
    <!-- 日志输出格式 -->
-	<property name="log.pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{20} - [%method,%line] - %msg%n" />
+    <property name="log.pattern" value="%clr(%d{[yyyy-MM-dd EE aa hh:mm:ss]}){red} %clr([%5p]) %clr(10928){magenta} %clr(---){cyan} %clr([%15.15t]){yellow} %clr(%-40.40logger{40}){cyan} %clr(:){faint} %m%n%wEx" />
 
     <!-- 控制台输出 -->
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
